@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TableRow android:id="@+id/rowDevice">
+
+                    <TextView
+                        android:id="@+id/lblDevice"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="left|center"
+                        android:text="Прибор"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltDevice"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltDeviceQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow android:id="@+id/rowKeyboard">
+
+                    <TextView
+                        android:id="@+id/lblKeyboard"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start|center"
+                        android:text="Клав."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltKeyboard"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltKeyboardQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblKeyboard2"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start|center"
+                        android:text="Клав.2"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltKeyboard2"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltKeyboardQuantity2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblBattery"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start|center"
+                        android:text="Аккум."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltBattery"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltBatteryQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblAntenna"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start|center"
+                        android:text="Антен."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltAntenna"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltAntennaQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblExtModule"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start|center"
+                        android:text="Мод.р."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltExtModule"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltExtModuleQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblIndication"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="start|center"
+                        android:text="Индик."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltIndication"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/sltIndicationQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblSensorSwanQuad"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Датчик SWAN QUAD"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltSensorSwanQuadQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblSensorSPR600"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Датчик SPR-600"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltSensorSPR600Quantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblSensorSWANPGB"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Датчик SWAN PGB"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltSensorSWANPGBQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblSensorСОМКWhite"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Датчик СОМК белый"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltSensorCOMKWhiteQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblSensorСОМКBrown"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Датчик СОМК кор."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltSensorCOMKBrownQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblSensorSmoke"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Датчик дыма"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltSensorSmokeQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblCableFourWires"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Кабель 4 жилы"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltCableFourWiresQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblCableTenWires"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Кабель 10 жил"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltCableTenWiresQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblTwistedPairOutside"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Витая пара н."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltTwistedPairOutsideQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblPowerCord"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Сетевой кабель"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltPowerCordQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblBoxWhite"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Короб белый"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltBoxWhiteQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblBoxYellow"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Короб желтый"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltBoxYellowQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblBoxBrown"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Короб кор."
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltBoxBrownQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblClip"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Скоба"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltClipQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblMontageSet"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Монтажный комплект"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltMontageSetQuantity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/lblComplexity"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Коэфф.сложности"
+                        android:textAlignment="gravity"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/sltComplexity"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btnCalc"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickCalc"
+                    android:text="Расчет" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickSave"
+                    android:text="Сохранить" />
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickReset"
+                    android:text="Сбросить"
+                    android:textAlignment="gravity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp">
+
+
+                <TextView
+                    android:id="@+id/txtQuickCalculation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="258dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
